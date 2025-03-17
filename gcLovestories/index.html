@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+    <title>우리의 블로그</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <header id="home-header">
+        <div class="header-content">
+            <a href="index.html"><h1>&#x1f495우리의 블로그&#x1f495</h1></a>
+            <nav>
+                <ul style="font-size: 20px;">
+                    <li><a href="index.html">홈</a></li>
+                    <li><a href="intro.html">소개</a></li>
+                    <li><a href="mem.html">추억 저장소</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="intro">
+            <h2>우리가 서로 사랑한 지</h2>
+            <div id="DDay"><span id="days">0</span>일 째</div>
+        </section>
+
+        <section class="posts">
+            <article>
+                <h2 style="color: white;">우리의 추억들</h2>
+                <span>
+                   <img src="./images/lotteWorld1.jpg" alt="롯데월드에서">
+                   2024/05/03
+                   <br>
+                   in 롯데월드
+                </span>
+                <span>
+                    <img src="./images/석촌호수.jpg" alt="석촌호수에서">
+                    2024/04/10
+                    <br>
+                    in 석촌호수
+                </span>
+                <span>
+                    <img src="./images/인생네컷.jpg" alt="인생네컷">
+                    2024/05/01
+                    <br>
+                    인생네컷!
+                </span>
+                
+                
+
+            </article>
+            <!-- 여기에 추가 포스트를 작성하세요 -->
+            <section>
+                
+                <div class="slide-container">
+                    <div class="slideShow">
+                        <div class="slide">
+                            <img src="./images/postImg1.jpg" alt="">
+                        </div>
+                        <div class="slide">
+                            <img src="./images/postImg2.jpg" alt="">
+                        </div>
+                        <div class="slide">
+                            <img src="./images/postImg3.jpg" alt="">
+                        </div>
+                    </div>
+                    <button class="prev" onclick="prevSlide()">&#10094;</button>
+                    <button class="next" onclick="nextSlide()">&#10095;</button>
+                </div>
+                
+            </section>
+        </section>
+    </main>
+    
+    <div style="padding-top: 7px; padding-bottom: 7px; background-color: #424141;">
+        <p style="color: white; text-align: center;">&copy; 2024 우리의 블로그. All rights reserved.</p>
+    </div>
+
+    <script src="./js/scripts.js"></script>
+</body>
+</html>

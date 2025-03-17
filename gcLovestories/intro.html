@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko" id="html-intro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+    <title>소개</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body style="height: 100%;">
+    <header>
+        <div class="top-bar">
+            <span class="left" style="font-size: 20px; color: black;"><a href="index.html" style="color:black;">&#x1f495<span style="font-size: 15px;">우리의 블로그</span></a></span>
+            <span class="center">소개</span>
+            <span class="right">
+                <input type="checkbox" id="sidebar-icon">
+                <label for="sidebar-icon"><img src="./images/sibar-icon.png" alt="사이드바"></label>
+                <span class="sidebar">
+                    <span style="color: white; margin-right: 6.5rem; font-size: 45px;">Menu</span>
+                    <label for="sidebar-icon"><img src="./images/x-icon.png" alt="취소"></label>
+                    <a href="index.html">홈</a>
+                    <a href="intro.html">소개</a>
+                    <a href="mem.html">추억 저장소</a>
+                </span>
+            </span>
+        </div>
+    </header>
+    <div class="heart">
+        <img src="./images/heart-image.png" alt="하트">
+    </div>
+    <div class="intro-main">
+        <div class="profile-container">
+            <div class="profile">
+                <div class="profile-item" id="girlfriend-profile" onclick="toggleProfile('girlfriend')">
+                    <img src="./images/girlfriend-photo.jpg" alt="겸미의 사진" class="profile-photo">
+                    <h1>겸미</h1>
+                </div>
+                <div class="profile-item" id="boyfriend-profile" onclick="toggleProfile('boyfriend')">
+                    <img src="./images/boyfriend-photo.jpg" alt="찬우의 사진" class="profile-photo">
+                    <h1>찬우</h1>
+                </div>
+            </div>
+            <div id="girlfriend-detail" class="profile-detail">
+                <h2>겸미 소개</h2>
+                <p>겸미에 대한 설명이 여기에 들어갑니다.</p>
+            </div>
+            <div id="boyfriend-detail" class="profile-detail">
+                <h2>찬우 소개</h2>
+                <p>찬우에 대한 설명이 여기에 들어갑니다.</p>
+            </div>
+        </div>
+    </div>
+    
+    <footer style="padding-top: 7px; padding-bottom: 7px; background-color: #424141;">
+        <p style="color: white; text-align: center;">&copy; 2024 우리의 블로그. All rights reserved.</p>
+    </footer>
+
+    <script src="./js/intro.js"></script>
+</body>
+</html>

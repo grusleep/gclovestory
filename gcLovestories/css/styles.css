@@ -1,0 +1,439 @@
+@font-face {
+    font-family: 'calla';
+    src: url('../폰트/ylee\ Mortal\ Heart\,\ Immortal\ Memory\ v.1.11\ \(TTF\).ttf');
+}
+
+a {
+    text-decoration-line: none;
+    color: white;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+h2 {
+    font-size: 35px;
+}
+
+/*========================헤더부분========================*/
+
+.top-bar {
+    border-bottom: 1px solid #333;
+    padding: 1rem;
+    z-index: 1;
+}
+
+
+
+.top-bar {
+    display: flex;
+    font-size: 30px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3px;
+    border-bottom: 1px solid #ccc;
+}
+.top-bar .left {
+    flex: 1;
+    text-align: left;
+    z-index: 1;
+}
+.top-bar .center {
+    flex: 1;
+    text-align: center;
+}
+.top-bar .right {
+    flex: 1;
+    text-align: right;
+    z-index: 1;
+}
+.top-bar img {
+    display: text;
+    height: 40px;
+    margin-top: 1rem;
+    margin-right: 1rem;
+}
+
+/*========================================================*/
+
+html {
+    background: linear-gradient(to top, #91d552, #fff);
+}
+
+body {
+    font-family: 'calla', Arial, sans-serif;
+    font-style: bold;
+    margin: 0; 
+    padding: 0;
+    line-height: 1;
+}
+
+#home-header {
+    background: url('../images/backgroundex.jpg') no-repeat center center/cover;
+    color: #fff;
+    height: 300px;
+    position: relative;
+    text-align: center;
+}
+
+.header-content {
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;  
+    box-sizing: border-box;
+    padding: 1rem;
+}
+
+article span {
+    width: 200px;
+    display: inline-block;
+    vertical-align: top;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1rem;
+    border: 10px solid;
+    border-color: #f4f4f4;
+    background-color: #f4f4f4;
+}
+
+article img {
+    position: relative;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;  
+    box-sizing: border-box;
+}
+
+.posts article {
+    background-image: url('../images/postBackground.jpg');
+    background-size: 100%;
+    margin: 1rem 0;
+    padding: 1rem;
+    border: 20px solid #333;
+    border-image: url('../images/postBorder.jpg') 50;
+    box-shadow: 4px 4px 4px #333 inset;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.posts section {
+    width: 100%; /* 부모 요소가 전체 너비를 차지하도록 수정 */
+    display: flex; /* 플렉스 박스 사용 */
+    justify-content: center; /* 자식 요소를 중앙 정렬 */
+    align-items: center; /* 자식 요소를 수직 중앙 정렬 */
+    text-align: center;
+    overflow: hidden;
+}
+
+.intro, .posts {
+    padding: 1rem;
+    margin: 1rem;
+    text-align: center;
+}
+
+/*====================사이드바=============================*/
+
+#sidebar-icon {
+    display: none;
+}
+#sidebar-icon + label img {
+    cursor: pointer;
+    position: relative;
+}
+
+.sidebar {
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    right: -250px;
+    z-index: 2;
+    transition: all .35s;
+}
+input[id='sidebar-icon']:checked + label + span {
+    right: 0;
+}
+
+.sidebar img{
+    display: text;
+    height: 30px;
+    margin-top: 1.45rem;
+    margin-right: 1.5rem;
+    cursor: pointer;
+    position: relative;
+}
+
+.sidebar a {
+    display: block;
+    font-size: 25px;
+    text-align: left;
+    margin-left: 1.5rem;
+    color: #f4f4f4;
+    text-decoration-line: none;
+    margin-top: 2rem;
+}
+
+/*========================================================*/
+
+/*=====================슬라이드 이미지=====================*/
+
+.slide-container {
+    width: 600px; /* 컨테이너 너비를 조정하여 중앙에 정렬 */
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slideShow {
+    display: flex;
+    transition: transform 1s ease;
+}
+
+.slide {
+    min-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.slide img {
+    width: 100%;
+    object-fit: cover; /* 사진 크기를 맞추고, 비율을 유지하면서 슬라이드 크기에 맞춤 */
+}
+
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+button.prev {
+    left: 0;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+button.next {
+    right: 0;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+button:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+    transition-duration: .5s;
+}
+
+
+/*==========================================================*/
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+#days {
+    font-family: cursive;
+    font-size: 50px;
+}
+
+
+/*======================소개 사이트========================*/
+
+#html-intro {
+    background: linear-gradient(to top, #91d552, #fff);
+    height: 100vh;
+}
+
+#html-mem {
+    background: linear-gradient(to top, #91d552, #fff);
+    height: 100vh;
+}
+
+.intro-main {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.profile-container {
+    width: 100%;
+    height: auto;
+    margin: auto;
+    padding-top: 45px;
+    padding-bottom: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transition: background-image 0.5s ease-in-out;
+}
+
+.intro-bg {
+    background-image: url('../images/postBackground.jpg'); /* 여친 배경 이미지 */
+    background-size: cover;
+    background-position: center;
+    border: 10px solid;
+    border-image: url('../images/postBorder.jpg') 50;
+    box-shadow: 4px 4px 4px #333 inset;
+}
+
+
+
+.profile {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-top: 2em;
+}
+
+.profile-item {
+    text-align: center;
+    z-index: 0;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: 4rem;
+    padding-top: 40px;
+    color: white;
+    text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+    cursor: pointer;
+    transition: transform 0.5s ease-in-out;
+}
+
+.profile-photo {
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border: 10px solid #fff;
+}
+
+.profile-item.active {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-60%, -60%) scale(1.2);
+    z-index: 1;
+}
+
+.profile-item.inactive {
+    display: none;
+}
+
+.profile-detail {
+    display: none;
+    text-align: center;
+    width: 90%;
+    color: black;
+    color: white;
+    text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+}
+
+.profile-detail.active {
+    display: block;
+}
+
+
+.heart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 20%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.heart img {
+    position: relative;
+    height: 500px;
+}
+/*=======================================================*/
+
+
+/*===================우리들의 추억 사이트===================*/
+
+.memories {
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 4rem;
+}
+
+.memory {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    background: #f4f4f4;
+    padding: 1rem;
+    border: 3px solid #ddd;
+}
+
+.memory img {
+    max-width: 25%;
+    margin-right: 1rem;
+}
+
+.description {
+    max-width: 800px;
+}
+
+.description p {
+    margin: 0.5rem 0;
+    font-size: 20px;
+}
+
+.underline {
+    display: inline-block;
+    position: relative;
+}
+
+.underline::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px; /* 밑줄이 글자에서 떨어진 거리 */
+    height: 1px; /* 밑줄의 두께 */
+    width: 100%;
+    background-color: black; /* 밑줄 색상 */
+}
+
+
+/*========================================================*/
